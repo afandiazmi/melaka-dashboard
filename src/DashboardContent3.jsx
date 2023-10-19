@@ -1,5 +1,5 @@
 function DashboardContent({ data }) {
-  const dataId1 = data.find((item) => item.id === "1");
+  const dataId1 = data.find((item) => item.id === "3");
 
   return (
     <>
