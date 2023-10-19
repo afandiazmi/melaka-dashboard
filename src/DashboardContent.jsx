@@ -1,6 +1,4 @@
 function DashboardContent({ data }) {
-  const dataId1 = data.find((item) => item.id === "1");
-
   return (
     <>
       <div className="container-fluid">
@@ -12,14 +10,16 @@ function DashboardContent({ data }) {
             <div className="card shadow border-start-primary py-2">
               <div className="card-body">
                 <div className="row align-items-center no-gutters">
-                  <div className="col me-2">
-                    <div className="text-uppercase text-primary fw-bold text-xs mb-1">
-                      <span>{dataId1 ? dataId1.name : ""}</span>
+                  {data.map((item) => (
+                    <div key={item.id} className="col me-2">
+                      <div className="text-uppercase text-primary fw-bold text-xs mb-1">
+                        <span>{item.name}</span>
+                      </div>
+                      <div className="text-dark fw-bold h5 mb-0">
+                        <span>{item.value}</span>
+                      </div>
                     </div>
-                    <div className="text-dark fw-bold h5 mb-0">
-                      <span>{dataId1 ? dataId1.value : ""}</span>
-                    </div>
-                  </div>
+                  ))}
                   <div className="col-auto">
                     <i className="fas fa-calendar fa-2x text-gray-300" />
                   </div>
