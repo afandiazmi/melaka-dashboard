@@ -23,7 +23,7 @@ function SideBar() {
                 <span>Group 1</span>
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink className="nav-link active" to="2">
                 <i className="fas fa-tachometer-alt" />
                 <span>Group 2</span>
@@ -34,7 +34,7 @@ function SideBar() {
                 <i className="fas fa-tachometer-alt" />
                 <span>Group 3</span>
               </NavLink>
-            </li>
+            </li> */}
           </ul>
           <div className="text-center d-none d-md-inline">
             <button
